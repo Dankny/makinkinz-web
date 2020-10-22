@@ -1,0 +1,23 @@
+/* Padding below the footer and lighter body text */
+
+
+body {
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+ }
+
+ nav.navbar {
+   padding-left: 50px;
+   padding-right: 50px;
+ }
+
+ .tentang {
+   text-align: justify ;
+ }
+
+
+
+
+   
+
+ 
