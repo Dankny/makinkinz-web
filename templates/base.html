@@ -31,7 +31,7 @@
       
       <a class="navbar-brand" href="#">
         <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/logo.png" width="50" height="50" alt="Makinkinz Meat" />
-        Makinkinz Meat Shop
+        Makinkinz
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,26 +41,45 @@
           <li class="nav-item ">
             <a class="nav-link" href="/">Home </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url '/profil.html' %}">Profil</a>
-          </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Produk
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              
-                <a class="dropdown-item" href="#">Produk</a>
-              
+              <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
+              <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Premium</a>
+                <!-- <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
+                <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">Produk Sapi Premium</a> -->
             </div>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="{% url '/profil.html' %}">Profil</a>
+          </li>
         </ul>
 
 
       </div>
     </nav>
-
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">MAINTENANCE</h4>
+            
+          </div>
+          <div class="modal-body">
+            <p>Halaman ini sedang dalam proses maintenance. Cek lagi nanti ya.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
   
     <div id="WAButton"></div>
   {% block content %}
@@ -92,7 +111,7 @@
   <footer class="container">
     
     <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2020 Makinkinz Meat Shop &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>&copy; 2020 Makinkinz Meat Shop </p>
     
   </footer>
 
