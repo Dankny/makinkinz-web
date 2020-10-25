@@ -11,8 +11,8 @@
     <!-- Font -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico" type="image/x-icon">
 
     <!--Jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -26,12 +26,22 @@
     
 </head>
 <body>
-
+<style>
+  navbar-brand.p {
+    margin: 0 auto;
+    max-width: 100px;
+    border: solid 2px #ccc;
+    padding: 12px;
+  }
+</style>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
       
       <a class="navbar-brand" href="#">
+   
         <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/logo.png" width="50" height="50" alt="Makinkinz Meat" />
-        Makinkinz
+            Makinkinz <br>
+          
+      
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,12 +49,12 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item ">
-            <a class="nav-link" href="/">Home </a>
+            <a class="nav-link" href="/"><b>Home</b>  </a>
           </li>
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Produk
+             <b>Produk</b> 
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
@@ -55,7 +65,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url '/profil.html' %}">Profil</a>
+            <a class="nav-link" href="{% url '/profil.html' %}"><b>Profil</b> </a>
           </li>
         </ul>
 
