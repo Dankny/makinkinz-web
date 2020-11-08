@@ -24,19 +24,82 @@
 
     <title>Makinkinz Meat Shop </title>
     
+    <style>
+      
+    
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      #myImg:hover {opacity: 0.7;}
+      
+     
+      
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+      
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      </style>
 </head>
 <body>
-<style>
-  navbar-brand.p {
-    margin: 0 auto;
-    max-width: 100px;
-    border: solid 2px #ccc;
-    padding: 12px;
-  }
-</style>
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
       
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
    
         <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/logo.png" width="50" height="50" alt="Makinkinz Meat" />
             Makinkinz <br>
@@ -51,54 +114,97 @@
           <li class="nav-item ">
             <a class="nav-link" href="/"><b>Home</b>  </a>
           </li>
-          
+          <li class="nav-item ">
+            <a data-toggle="modal" data-target="#myModal" class="nav-link" href="#"><b>Promo</b>  </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <b>Produk</b> 
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Semua Produk</a>
               <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
               <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">Produk Sapi Premium</a>
                 <!-- maintenance mode -->
-              <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a> -->
-              <!-- <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Produk Sapi Premium</a> -->
+              <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Produk Sapi Premium</a> -->
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url '/profil.html' %}"><b>Profil</b> </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <b>Profil</b> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="nav-link" href="{% url '/profil.html' %}">About Us </a>
+              <a class="nav-link" href="{% url '/contact-us.html' %}">Contact Us </a>
+              <a class="nav-link" href="{% url '/partnership.html' %}">Partnership </a>
+                <!-- maintenance mode -->
+              <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Produk Sapi Premium</a> -->
+            </div>
           </li>
+          
         </ul>
-
 
       </div>
     </nav>
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-      
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">MAINTENANCE</h4>
-            
-          </div>
-          <div class="modal-body">
-            <p>Halaman ini sedang dalam proses maintenance. Cek lagi nanti ya.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-          </div>
-        </div>
-        
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAINTENANCE</h4>
+      </div>
+      <div class="modal-body">
+        <p>Halaman ini sedang dalam proses maintenance. Cek lagi nanti ya.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
       </div>
     </div>
+    
+  </div>
+</div>
+
   
     <div id="WAButton"></div>
   {% block content %}
   
   {% endblock content %}
+
+
   
 
-<script>
+<!-- <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+
+      captionText.innerHTML = this.alt;
+      
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    
+    </script> -->
+
+<!-- <script>
   $(function() {
   $('#WAButton').floatingWhatsApp({
     phone: '6285772902160', //WhatsApp Business phone number International format-
@@ -112,7 +218,7 @@
     position: "right"    
   });
 });
-</script>
+</script> -->
   
   
 
@@ -120,9 +226,35 @@
 
   <hr>
   <footer class="container">
+    <div class="row">
+      <div class="col">
+        <h4>
+          Contact Us
+        </h4> 
+          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/wa.png" alt=""> <a href="https://wa.me/6285772902160?text=Halo%20Makinkinz,%20saya%20mau%20tanya%20nih.%20">Whatsapp</a><br>
+          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/ig.png" alt=""> <a href="https://www.instagram.com/makinkinz/">Instagram</a><br>
+          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/shopee.png" alt=""> <a href="https://shopee.co.id/makinkinz">Shopee</a>
+      </div>
+      <div class="col">
+        <h4>
+          Partnership
+        </h4> 
+          <p>Makinkinz sangat terbuka dengan teman-teman yang ingin menjadi reseller maupun horeca. 
+            Silahkan klik <a href="{% url '/partnership.html' %}">partnership</a> untuk informasi lebih lanjut.</p>
+            
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col">
+
+      <p>&copy; 2020 Makinkinz Meat Shop </p></div>
+      <div class="col">
+        <p class="float-right"><a href="#">Back to top</a></p>
+      </div>
+      
+    </div>
     
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2020 Makinkinz Meat Shop </p>
     
   </footer>
 
@@ -137,5 +269,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     
+  
   </body>
 </html>
