@@ -35,7 +35,7 @@
 
   a:hover,
   a:focus {
-  color: #2a6496;
+  
   text-decoration: underline;
 }
 
@@ -48,20 +48,16 @@
 
 
   .bg-text {
-    background-color: rgb(255, 255, 255);
-    /* Fallback color */
-    background-color: rgba(255, 255, 255, 0.6);
-    /* Black w/opacity/see-through */
+ 
     color: black;
     font-weight: bold;
-    border: 3px solid #f1f1f1;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 60%;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
   }
 </style>
@@ -151,12 +147,14 @@
           
               
           <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/DagingBrisket(1).jpg"
-            alt="Semua" class="image-menu" style="opacity: 0.5;width:100%">
+            alt="Semua" class="image-menu" style="opacity: 0.2;width:100%">
             <a class="dropdown-item" href="{% url '/semua-produk.html' %}" >
           <div class="bg-text">
-            <h2>
-              <b>Semua Produk</b>
-            </h2>
+            
+              <p class="text-wrap" style="font-size:3vw;">
+                Semua Produk
+              </p>
+            
           </div>
           </a>
         </div>
@@ -166,12 +164,14 @@
           
               
           <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/Oxtail.jpg"
-            alt="Sapi Spesial" class="image-menu" style="opacity: 0.5;width:100%">
+            alt="Sapi Spesial" class="image-menu" style="opacity: 0.2;width:100%">
             <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">
           <div class="bg-text">
-            <h2>
-              <b>Sapi Spesial</b>
-            </h2>
+            
+              <p class="text-wrap" style="font-size:3vw;">
+                Sapi Spesial
+              </p>
+            
           </div>
           </a>
         </div>
@@ -180,13 +180,13 @@
         <div class="container-menu">
           
           <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/sapi-premium/Karubi.jpg"
-            alt="Sapi Premium" class="image-menu" style="opacity: 0.5;width:100%">
+            alt="Sapi Premium" class="image-menu" style="opacity: 0.2;width:100%">
 
             <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">
           <div class="bg-text">
-            <h2>
-              <b>Sapi Premium</b>
-            </h2>
+            
+              <p class="text-wrap" style="font-size:3vw;">Sapi Premium</p>
+            
           </div>
           </a>
         </div>
