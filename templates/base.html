@@ -92,7 +92,9 @@
         padding-left: 10px;
         padding-right: 10px;
       }
-
+      
+      
+        
       </style>
 </head>
 <body>
@@ -122,7 +124,7 @@
              <b>Produk</b> 
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Semua Produk</a>
+              <a class="dropdown-item" href="{% url '/semua-produk.html' %}" >Semua Produk</a>
               <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
               <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">Produk Sapi Premium</a>
                 <!-- maintenance mode -->
