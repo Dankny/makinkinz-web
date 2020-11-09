@@ -1,188 +1,226 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Static -->
-    <link rel="stylesheet" type="text/css" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/main.css">
-    <!-- Font -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Static -->
+  <link rel="stylesheet" type="text/css" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/main.css">
+  <!-- Font -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico"
+    type="image/x-icon">
+  <link rel="icon" href="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/favicon.ico" type="image/x-icon">
 
-    <!--Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--Floating WhatsApp css-->
-    <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
-    <!--Floating WhatsApp javascript-->
-    <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
-        
+  <!--Jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--Floating WhatsApp css-->
+  <link rel="stylesheet"
+    href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+  <!--Floating WhatsApp javascript-->
+  <script type="text/javascript"
+    src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+  </script>
 
-    <title>Makinkinz Meat Shop </title>
-    
-    <style>
-      
-    
-      #myImg {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      
-      #myImg:hover {opacity: 0.7;}
-      
-     
-      
-      @-webkit-keyframes zoom {
-        from {-webkit-transform:scale(0)} 
-        to {-webkit-transform:scale(1)}
-      }
-      
-      @keyframes zoom {
-        from {transform:scale(0)} 
-        to {transform:scale(1)}
-      }
-      
-      /* The Close Button */
-      .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-      
-      .close:hover,
-      .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      
-      /* 100% Image Width on Smaller Screens */
-      @media only screen and (max-width: 700px){
-        .modal-content {
-          width: 100%;
-        }
+
+  <title>Makinkinz Meat Shop </title>
+
+  <style>
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
       }
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+      to {
+        transform: scale(1)
       }
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.35);
-        border-radius: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
       }
-      
-      
-        
-      </style>
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D44W2MEBLC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D44W2MEBLC');
+  </script>
+
+
+
+
+
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-      
-      <a class="navbar-brand" href="/">
-   
-        <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/logo.png" width="50" height="50" alt="Makinkinz Meat" />
-            Makinkinz <br>
-          
-      
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="/"><b>Home</b>  </a>
-          </li>
-          <li class="nav-item ">
-            <a data-toggle="modal" data-target="#myModal" class="nav-link" href="#"><b>Promo</b>  </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             <b>Produk</b> 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url '/semua-produk.html' %}" >Semua Produk</a>
-              <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
-              <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">Produk Sapi Premium</a>
-                <!-- maintenance mode -->
-              <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+
+    <a class="navbar-brand" href="/">
+
+      <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/images/logo.png" width="50" height="50"
+        alt="Makinkinz Meat" />
+      Makinkinz <br>
+
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/"><b>Home</b> </a>
+        </li>
+        <li class="nav-item ">
+          <a data-toggle="modal" data-target="#myModal" class="nav-link" href="#"><b>Promo</b> </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <b>Produk</b>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url '/semua-produk.html' %}">Semua Produk</a>
+            <a class="dropdown-item" href="{% url '/produk-sapi-sp.html' %}">Produk Sapi Spesial</a>
+            <a class="dropdown-item" href="{% url '/produk-sapi-pr.html' %}">Produk Sapi Premium</a>
+            <!-- maintenance mode -->
+            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
               <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Produk Sapi Premium</a> -->
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             <b>Profil</b> 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="nav-link" href="{% url '/profil.html' %}">About Us </a>
-              <a class="nav-link" href="{% url '/contact-us.html' %}">Contact Us </a>
-              <a class="nav-link" href="{% url '/partnership.html' %}">Partnership </a>
-                <!-- maintenance mode -->
-              <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <b>Profil</b>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link" href="{% url '/profil.html' %}">About Us </a>
+            <a class="nav-link" href="{% url '/contact-us.html' %}">Contact Us </a>
+            <a class="nav-link" href="{% url '/partnership.html' %}">Partnership </a>
+            <!-- maintenance mode -->
+            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item">Produk Sapi Spesial</a>
               <a class="dropdown-item" data-toggle="modal" data-target="#myModal" >Produk Sapi Premium</a> -->
-            </div>
-          </li>
-          
-        </ul>
+          </div>
+        </li>
 
-      </div>
-    </nav>
+      </ul>
 
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
-  
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">MAINTENANCE</h4>
-      </div>
-      <div class="modal-body">
-        <p>Halaman ini sedang dalam proses maintenance. Cek lagi nanti ya.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-      </div>
     </div>
-    
-  </div>
-</div>
+  </nav>
 
-  
-    <div id="WAButton"></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">MAINTENANCE</h4>
+        </div>
+        <div class="modal-body">
+          <p>Halaman ini sedang dalam proses maintenance. Cek lagi nanti ya.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="WAButton"></div>
   {% block content %}
-  
+
   {% endblock content %}
 
 
-  
 
-<!-- <script>
+
+  <!-- <script>
     // Get the modal
     var modal = document.getElementById("myModal");
     
@@ -206,7 +244,7 @@
     
     </script> -->
 
-<!-- <script>
+  <!-- <script>
   $(function() {
   $('#WAButton').floatingWhatsApp({
     phone: '6285772902160', //WhatsApp Business phone number International format-
@@ -221,8 +259,8 @@
   });
 });
 </script> -->
-  
-  
+
+
 
 
 
@@ -232,45 +270,61 @@
       <div class="col">
         <h4>
           Contact Us
-        </h4> 
-          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/wa.png" alt=""> <a href="https://wa.me/6285772902160?text=Halo%20Makinkinz,%20saya%20mau%20tanya%20nih.%20">Whatsapp</a><br>
-          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/ig.png" alt=""> <a href="https://www.instagram.com/makinkinz/">Instagram</a><br>
-          <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/shopee.png" alt=""> <a href="https://shopee.co.id/makinkinz">Shopee</a>
+        </h4>
+        <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/wa.png" alt=""> <a
+          href="https://wa.me/6285772902160?text=Halo%20Makinkinz,%20saya%20mau%20tanya%20nih.%20">Whatsapp</a><br>
+        <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/ig.png" alt=""> <a
+          href="https://www.instagram.com/makinkinz/">Instagram</a><br>
+        <img src="https://makinkinz-meat.s3-ap-southeast-1.amazonaws.com/static/shopee.png" alt=""> <a
+          href="https://shopee.co.id/makinkinz">Shopee</a>
       </div>
       <div class="col">
         <h4>
           Partnership
-        </h4> 
-          <p>Makinkinz sangat terbuka dengan teman-teman yang ingin menjadi reseller maupun horeca. 
-            Silahkan klik <a href="{% url '/partnership.html' %}">partnership</a> untuk informasi lebih lanjut.</p>
-            
+        </h4>
+        <p>Makinkinz sangat terbuka dengan teman-teman yang ingin menjadi reseller maupun horeca.
+          Silahkan klik <a href="{% url '/partnership.html' %}">partnership</a> untuk informasi lebih lanjut.</p>
+
       </div>
     </div>
     <hr>
     <div class="row">
       <div class="col">
 
-      <p>&copy; 2020 Makinkinz Meat Shop </p></div>
+        <p>&copy; 2020 Makinkinz Meat Shop </p>
+      </div>
       <div class="col">
         <p class="float-right"><a href="#">Back to top</a></p>
       </div>
-      
+
     </div>
-    
-    
+
+
   </footer>
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    
-  
-  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script>
+    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+  </script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
 </html>
