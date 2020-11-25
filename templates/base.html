@@ -32,6 +32,23 @@
   <title>Makinkinz Meat Shop </title>
 
   <style>
+    .myFloatingWidget {
+      position:fixed; 
+      right:0px; 
+      bottom:5%;
+      z-index: 2;
+      display: table; 
+      font-family: sans-serif; 
+      text-decoration: none; 
+      margin: 1em auto; color: #fff; 
+      font-size: 0.9em; 
+      padding: 1em 2em 1em 3.5em; 
+      border-radius: 2em; 
+      font-weight: bold; 
+      background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') 
+      no-repeat 1.5em center; 
+      background-size: 1.6em;
+    }
     #myImg {
       border-radius: 5px;
       cursor: pointer;
@@ -132,6 +149,9 @@
 </head>
 
 <body>
+  <a class="myFloatingWidget" href="
+  https://wa.me/6285772902160?text=Halo%20Makinkinz,%20saya%20kontaknya%20dari%20web%20makinkinz.com.%20Saya%20mau%20tanya%20nih.%20" >
+  WhatsApp</a>
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
 
@@ -211,54 +231,12 @@
     </div>
   </div>
 
-
-  <div id="WAButton"></div>
+  
   {% block content %}
 
   {% endblock content %}
 
 
-
-
-  <!-- <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-      modal.style.display = "block";
-
-      captionText.innerHTML = this.alt;
-      
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
-      modal.style.display = "none";
-    }
-    
-    </script> -->
-
-  <!-- <script>
-  $(function() {
-  $('#WAButton').floatingWhatsApp({
-    phone: '6285772902160', //WhatsApp Business phone number International format-
-    //Get it with Toky at https://toky.co/en/features/whatsapp.
-    headerTitle: 'Chat with us on WhatsApp!', //Popup Title
-    popupMessage: 'Hello, how can we help you?', //Popup Message
-    showPopup: true, //Enables popup display
-    buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-    //headerColor: 'crimson', //Custom header color
-    //backgroundColor: 'crimson', //Custom background button color
-    position: "right"    
-  });
-});
-</script> -->
 
 
 
